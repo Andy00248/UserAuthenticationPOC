@@ -1,0 +1,17 @@
+{
+  "name": "userauthentication",
+  "version": "1.0.0",
+  "description": "A poc to create a demo project which uses MongoDB to authenticate users and userSessions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sadananda",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10",
+    "nodemon": "^2.0.3"
+  }
+}
