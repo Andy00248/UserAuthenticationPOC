@@ -13,7 +13,10 @@ app.listen(port, ()=> {
     console.log(`Listening on port ${port}...`);
 });
 
-mongoose.connect("mongodb://localhost/authentication", {useNewUrlParser:true, useUnifiedTopology:true});
+const dbStringNoAuth = "mongodb://localhost/authentication";
+const dbStringAuth = "mongodb://user1:password123@localhost:27017/authentication";
+
+mongoose.connect(dbStringAuth, {useNewUrlParser:true, useUnifiedTopology:true});
 
 mongoose.connection
     .once('open', function(){
