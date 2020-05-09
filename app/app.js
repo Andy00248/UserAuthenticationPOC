@@ -15,8 +15,9 @@ app.listen(port, ()=> {
 
 const dbStringNoAuth = "mongodb://localhost/authentication";
 const dbStringAuth = "mongodb://user1:password123@localhost:27017/authentication";
+const dbStringAtlas = "mongodb+srv://admin:adminpassword@test-india-demo-afq6p.mongodb.net/test?retryWrites=true&w=majority";
 
-mongoose.connect(dbStringAuth, {useNewUrlParser:true, useUnifiedTopology:true});
+mongoose.connect(dbStringAtlas, {useNewUrlParser:true, useUnifiedTopology:true});
 
 mongoose.connection
     .once('open', function(){
