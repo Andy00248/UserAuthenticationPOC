@@ -27,9 +27,6 @@ mongoose.connection
         console.log("Error: ", error);
     });
 
-
-
-module.exports = app;
 // test commit for git push
 
 //******************************* */
@@ -243,3 +240,5 @@ app.get('/api/account/logout', (req, res, next) => {
         });
     });
 });
+
+module.exports = app;
