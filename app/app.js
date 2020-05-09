@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const MongoClient = require('mongodb').MongoClient;
 const User = require('../core/users');
 const UserSession = require('../core/userSessions');
 
@@ -17,8 +18,9 @@ const dbStringNoAuth = "mongodb://localhost/authentication";
 const dbStringAuth = "mongodb://user1:password123@localhost:27017/authentication";
 const dbStringAtlas = "mongodb+srv://admin:adminpassword@test-india-demo-afq6p.mongodb.net/test?retryWrites=true&w=majority";
 let connected = false;
+const uri = process.env.DATABASE_URI || dbStringAtlas;
 
-mongoose.connect(dbStringAtlas, {useNewUrlParser:true, useUnifiedTopology:true});
+mongoose.connect(uri, {useNewUrlParser:true, useUnifiedTopology:true});
 
 mongoose.connection
     .once('open', function(){
