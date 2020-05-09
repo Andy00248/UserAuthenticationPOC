@@ -1,20 +1,20 @@
-// const express = require('express');
-// const app = express();
-// app.use(express.json());
+const express = require('express');
+const app = express();
+app.use(express.json());
 
-// const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-// app.listen(port, ()=> {
-//     console.log(`Listening on port ${port}...`);
-// });
+app.listen(port, ()=> {
+    console.log(`Listening on port ${port}...`);
+});
 
-// app.get('/', (req, res) => {
-//     res.send({
-//         success: true,
-//         message: "Welcome"
-//     });
-// });
+app.get('/', (req, res) => {
+    res.send({
+        success: true,
+        message: "Welcome"
+    });
+});
 
-// console.log("Just testing")
+console.log("Just testing")
 
-const app = require('./app/app');
+// const app = require('./app/app');
