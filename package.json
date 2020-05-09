@@ -4,8 +4,7 @@
   "description": "A poc to create a demo project which uses MongoDB to authenticate users and userSessions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd app && node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sadananda",
   "license": "ISC",
