@@ -16,12 +16,14 @@ app.listen(port, ()=> {
 const dbStringNoAuth = "mongodb://localhost/authentication";
 const dbStringAuth = "mongodb://user1:password123@localhost:27017/authentication";
 const dbStringAtlas = "mongodb+srv://admin:adminpassword@test-india-demo-afq6p.mongodb.net/test?retryWrites=true&w=majority";
+let connected = false;
 
 mongoose.connect(dbStringAtlas, {useNewUrlParser:true, useUnifiedTopology:true});
 
 mongoose.connection
     .once('open', function(){
         console.log('Connected');
+        connected = true;
     })
     .on('error', (error)=>{
         console.log("Error: ", error);
@@ -34,7 +36,8 @@ mongoose.connection
 app.get('/', (req, res) => {
     res.send({
         success: true,
-        message: "Welcome"
+        message: "Welcome",
+        connected: connected
     });
 });
 
